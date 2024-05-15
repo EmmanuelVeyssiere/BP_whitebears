@@ -4,11 +4,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RegisterComponent } from "./user/register.component";
-import { SignInComponent } from "./user/sign-in.component";
 import { CoreModule } from './core/core.module';
 import { CatalogModule } from './catalog/catalog.module';
-import { UserModule } from './user/user.module';
 
 @NgModule({
   declarations: [
@@ -20,9 +17,8 @@ import { UserModule } from './user/user.module';
     ReactiveFormsModule,
     AppRoutingModule,
     CoreModule,
-    CatalogModule,
-    UserModule
-  ],
+    CatalogModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

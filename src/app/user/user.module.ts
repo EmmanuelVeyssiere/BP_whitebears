@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms'
 
-import { AppRoutingModule } from '../app-routing.module';
 import { RegisterComponent } from "./register.component";
 import { SignInComponent } from "./sign-in.component";
 import { SharedModule } from '../shared/shared.module';
+import { UsersRoutingModule } from './users-routing.module';
 
 @NgModule({
   declarations: [
@@ -15,8 +14,8 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule,
-    SharedModule
+    SharedModule,
+    UsersRoutingModule
   ],
   providers: [],
   exports: []
