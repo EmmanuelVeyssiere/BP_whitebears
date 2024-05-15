@@ -35,15 +35,19 @@ import { Router } from '@angular/router';
   
     registerUser(user: IUser) {
       this.saving = true;
-      this.userRepository.saveUser(user)
-        .subscribe({
-          error: () => this.saving = false,
-          complete: () => this.router.navigate(['/catalog'])
-        });
+      this.saveAndRedirect(user);
     }
   
     cancel() {
       this.router.navigate(['/']);
+    }
+
+    private saveAndRedirect(user:IUser){
+        return this.userRepository.saveUser(user)
+        .subscribe({
+          error: () => this.saving = false,
+          complete: () => this.router.navigate(['/catalog'])
+        });
     }
   }
   
