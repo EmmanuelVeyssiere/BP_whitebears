@@ -15,7 +15,7 @@ import { FilterClassesService } from './filter-classes.service';
     SharedModule,
     AppRoutingModule
   ],
-  providers: [CatalogRepositoryService, FilterClassesService],
+  providers: [],
   exports: []
 })
 export class CatalogModule { }
